@@ -24,4 +24,6 @@ visnet$nodes$value <- eig
 
 # plot object -----------------------------------------------------------------
 visNetwork(nodes = visnet$nodes, edges = visnet$edges) %>%
-  visEdges()
+    visEdges(shadow = TRUE,
+           arrows =list(from = list(enabled = TRUE, scaleFactor = 2)),
+           color = list(color = "lightblue", highlight = "red")) 
